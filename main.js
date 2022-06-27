@@ -1,3 +1,10 @@
+const html = document.querySelector('html')
+const checkbox = document.querySelector('#toggle-dark-mode')
+
+checkbox.addEventListener('change', function(){
+    html.classList.toggle('dark-mode')
+})
+
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -25,11 +32,12 @@ const swiper = new Swiper('.swiper', {
     keyboard: true,
     breakpoints:{
         767: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             setWapperSize: true
         }
     }
 });
+
 
 const scrollReveal = new ScrollReveal({
     origin:'top',
@@ -95,3 +103,4 @@ window.addEventListener('scroll',function() {
     menuButtonVisible()
     activateMenuAtCurrentSection()
 })
+
